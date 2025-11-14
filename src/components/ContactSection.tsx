@@ -39,6 +39,10 @@ export default function ContactSection() {
     } catch (error) {
       console.error('Error submitting contact:', error);
       setSubmitStatus('error');
+      // Log detailed error for debugging
+      if (error instanceof Error) {
+        console.error('Error details:', error.message);
+      }
     } finally {
       setIsSubmitting(false);
     }

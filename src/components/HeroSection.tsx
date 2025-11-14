@@ -13,11 +13,19 @@ export default function HeroSection() {
       id="hero"
       className="relative h-screen flex items-center justify-center overflow-hidden"
     >
+      {/* Startup background image shown immediately while video loads */}
+      <div 
+        className="absolute inset-0 w-full h-full bg-cover bg-center"
+        style={{
+          backgroundImage: 'url(/assets/images/start-frame-1024x576.jpg)',
+        }}
+      />
       <video
         autoPlay
         loop
         muted
         playsInline
+        poster="/assets/images/start-frame-1024x576.jpg"
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source src="/assets/videos/background-video.mp4" type="video/mp4" />
